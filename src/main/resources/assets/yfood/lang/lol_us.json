@@ -1,3 +1,7 @@
 {
-  "item.yfood.test_item": "Test Thingie"
+  "item.yfood.test_item": "Test Thingie",
+
+  "block.yfood.test_block": "Test Cubb",
+
+  "creativemodetab.test_tab": "yFood Test Thingies"
 }

@@ -1,3 +1,7 @@
 {
-  "item.yfood.test_item": "Testovací Předmět"
+  "item.yfood.test_item": "Testovací Předmět",
+
+  "block.yfood.test_block": "Testovací Blok",
+
+  "creativemodetab.test_tab": "Testovací Předměty z yFood",,
 }

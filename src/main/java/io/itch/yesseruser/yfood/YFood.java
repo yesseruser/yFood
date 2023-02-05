@@ -1,8 +1,9 @@
 package io.itch.yesseruser.yfood;
 
 import com.mojang.logging.LogUtils;
+import io.itch.yesseruser.yfood.block.ModBlocks;
+import io.itch.yesseruser.yfood.item.ModCMTabs;
 import io.itch.yesseruser.yfood.item.ModItems;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
@@ -26,6 +27,7 @@ public class YFood
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(bus);
+        ModBlocks.register(bus);
 
         // Register the commonSetup method for modloading
         bus.addListener(this::commonSetup);
@@ -44,8 +46,9 @@ public class YFood
 
     private void addCreative(CreativeModeTabEvent.BuildContents event)
     {
-        if(event.getTab() == CreativeModeTabs.INGREDIENTS){
+        if(event.getTab() == ModCMTabs.TEST_TAB){
             event.accept(ModItems.TEST_ITEM);
+            event.accept(ModBlocks.TEST_BLOCK);
         }
     }
 
